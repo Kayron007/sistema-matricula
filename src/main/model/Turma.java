@@ -18,6 +18,7 @@ public class Turma extends BaseEntity {
         this.id_curso = id_curso;
     }
 
+    @Override
     public void mostrarDados() {
         System.out.println("=== Turma ===");
         System.out.println("ID: " + id);
