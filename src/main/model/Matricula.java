@@ -3,13 +3,13 @@ package main.model;
 import java.time.LocalDate;
 
 public class Matricula extends BaseEntity {
-    private String id_aluno;
-    private String id_turma;
+    private String id_aluno; //FK
+    private String id_turma; //FK
     private boolean status;
     private LocalDate data_matricula;
 
-    // Construtor sem-arg
-    public Matricula() { super(); }
+    // Construtor sem arg
+    public Matricula() {}
 
     // Construtor principal
     public Matricula(String id, String id_aluno, String id_turma, boolean status, LocalDate data_matricula) {
@@ -20,7 +20,14 @@ public class Matricula extends BaseEntity {
         this.data_matricula = data_matricula;
     }
 
-    //public void mostrarDados() {}
+    public void mostrarDados() {
+        System.out.println("=== Matrícula ===");
+        System.out.println("ID: " + id);
+        System.out.println("Aluno (ID): " + id_aluno);
+        System.out.println("Turma: (ID): " + id_turma);
+        System.out.println("Status: " + (status ? "Ativa" : "Inativa"));
+        System.out.println("Data da matrícula: " + data_matricula);
+    }
 
     // Getters e Setters
     public String getIdAluno() { return id_aluno; }

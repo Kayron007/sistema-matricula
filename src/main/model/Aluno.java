@@ -7,8 +7,8 @@ public class Aluno extends BaseEntity {
     private String endereco;
     private String telefone;
 
-    // Construtor sem-arg
-    public Aluno() { super(); }
+    //Construtor sem arg
+    public Aluno() {}
 
     //Construtor principal
     public Aluno(String id, String nome, String email, String cpf, String endereco, String telefone) {
@@ -20,9 +20,17 @@ public class Aluno extends BaseEntity {
         this.telefone = telefone;
     }
 
-    //public void mostrarDados() {}
+    @Override
+    public void mostrarDados() {
+        System.out.println("=== Aluno ===");
+        System.out.println("ID: " + id);
+        System.out.println("Nome: " + nome);
+        System.out.println("E-mail: " + email);
+        System.out.println("Endereço: " + endereco);
+        System.out.println("Telefone: " + telefone);
+    }
 
-    // Getters e Setters
+    //Getters e Setters
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
     

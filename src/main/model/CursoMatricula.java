@@ -1,8 +1,8 @@
 package main.model;
 
 public class CursoMatricula {
-    private String cursoId;
-    private String matriculaId;
+    private String cursoId; //FK para Curso
+    private String matriculaId; //FK para Matricula
 
     // Construtor sem arg
     public CursoMatricula() {}
@@ -13,7 +13,11 @@ public class CursoMatricula {
         this.matriculaId = matriculaId;
     }
 
-    //public void mostrarDados() {}
+    public void mostrarDados() {
+        System.out.println("=== Curso e Matrícula ===");
+        System.out.println("Curso vinculado (ID): " + cursoId);
+        System.out.println("Matrícula vinculada (ID): " + matriculaId);
+    }
 
     // Getters e Setters
     public String getCursoId() { return cursoId; }

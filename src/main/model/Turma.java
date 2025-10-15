@@ -5,12 +5,12 @@ import java.time.Year;
 public class Turma extends BaseEntity {
     private Year ano;
     private int semestre;
-    private String id_curso;
+    private String id_curso; //FK
 
-    //Construtor vazio
-    public Turma() { super(); }
+    //Construtor sem arg
+    public Turma() {}
 
-    //Construtor full
+    //Construtor principal
     public Turma(String id, Year ano, int semestre, String id_curso) {
         super(id);
         this.ano = ano;
@@ -18,7 +18,13 @@ public class Turma extends BaseEntity {
         this.id_curso = id_curso;
     }
 
-    //public void mostrarDados() {}
+    public void mostrarDados() {
+        System.out.println("=== Turma ===");
+        System.out.println("ID: " + id);
+        System.out.println("Ano: " + ano);
+        System.out.println("Semestre: " + semestre);
+        System.out.println("Curso vinculado (ID): " + id_curso);
+    }
 
     //Getters e Setters
     public Year getAno() { return ano; }
