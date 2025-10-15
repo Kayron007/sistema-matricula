@@ -20,6 +20,7 @@ public class Matricula extends BaseEntity {
         this.data_matricula = data_matricula;
     }
 
+    @Override
     public void mostrarDados() {
         System.out.println("=== Matrícula ===");
         System.out.println("ID: " + id);
