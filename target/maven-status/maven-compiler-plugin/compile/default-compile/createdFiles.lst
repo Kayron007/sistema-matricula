@@ -1,0 +1,17 @@
+model/DAO/CursoMatriculaDAO.class
+model/DAO/TurmaDAO.class
+model/DAO/CursoDAO.class
+com/mycompany/sistemamatricula/Main.class
+model/DAO/InterfaceDAO.class
+model/DAO/MatriculaDAO.class
+model/Turma.class
+model/DAO/MateriaDAO.class
+model/Materia.class
+model/Conexao.class
+model/CursoMatricula.class
+model/Curso.class
+com/mycompany/sistemamatricula/SistemaMatricula.class
+model/Matricula.class
+model/Aluno.class
+model/BaseEntity.class
+model/DAO/AlunoDAO.class
