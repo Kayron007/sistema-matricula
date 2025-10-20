@@ -1,13 +1,13 @@
 package main.model;
 
-public abstract class BaseEntity {
+public abstract class Superclasse {
     protected String id;
 
     //Construtor sem arg
-    public BaseEntity() {}
+    public Superclasse() {}
 
     //Construtor principal
-    public BaseEntity(String id) {
+    public Superclasse(String id) {
         this.id = id;
     }
 
