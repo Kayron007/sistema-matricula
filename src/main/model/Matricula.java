@@ -2,7 +2,7 @@ package main.model;
 
 import java.time.LocalDate;
 
-public class Matricula extends BaseEntity {
+public class Matricula extends Superclasse {
     private String id_aluno; //FK
     private String id_turma; //FK
     private boolean status;
@@ -33,8 +33,8 @@ public class Matricula extends BaseEntity {
     public String getIdAluno() { return id_aluno; }
     public void setIdAluno(String id_aluno) { this.id_aluno = id_aluno; }
 
-    public String getIdturma() { return id_turma; }
-    public void setIdturma(String id_turma) { this.id_turma = id_turma; }
+    public String getIdTurma() { return id_turma; }
+    public void setIdTurma(String id_turma) { this.id_turma = id_turma; }
 
     public boolean isStatus() { return status; }
     public void setStatus(boolean status) { this.status = status; }

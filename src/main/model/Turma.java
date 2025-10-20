@@ -2,7 +2,7 @@ package main.model;
 
 import java.time.Year;
 
-public class Turma extends BaseEntity {
+public class Turma extends Superclasse {
     private Year ano;
     private int semestre;
     private String id_curso; //FK
@@ -33,6 +33,6 @@ public class Turma extends BaseEntity {
     public int getSemestre() { return semestre; }
     public void setSemestre(int semestre) { this.semestre = semestre; }
 
-    public String getIdcurso() { return id_curso; }
-    public void setIdcurso(String id_curso) { this.id_curso = id_curso; }
+    public String getIdCurso() { return id_curso; }
+    public void setIdCurso(String id_curso) { this.id_curso = id_curso; }
 }
