@@ -1,6 +1,6 @@
 package main.model;
 
-public class Materia extends BaseEntity {
+public class Materia extends Superclasse {
     private String nome;
     private String id_curso; //FK
 
@@ -26,6 +26,6 @@ public class Materia extends BaseEntity {
     public String getNome() { return nome; } 
     public void setNome(String nome) { this.nome = nome; }
 
-    public String getIdcurso() { return id_curso; }
-    public void setIdcurso(String id_curso) { this.id_curso = id_curso; }
+    public String getIdCurso() { return id_curso; }
+    public void setIdCurso(String id_curso) { this.id_curso = id_curso; }
 }
