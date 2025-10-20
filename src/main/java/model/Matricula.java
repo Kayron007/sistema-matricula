@@ -1,7 +1,6 @@
-package model;
+package main.java.model;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Matricula extends BaseEntity {
     private Aluno id_aluno; //FK
@@ -35,12 +34,12 @@ public class Matricula extends BaseEntity {
     public Aluno getIdAluno() { return id_aluno; }
     public void setIdAluno(Aluno id_aluno) { this.id_aluno = id_aluno; }
 
-    public Turma getIdturma() { return id_turma; }
-    public void setIdturma(Turma id_turma) { this.id_turma = id_turma; }
+    public Turma getIdTurma() { return id_turma; }
+    public void setIdTurma(Turma id_turma) { this.id_turma = id_turma; }
 
     public boolean isStatus() { return status; }
     public void setStatus(boolean status) { this.status = status; }
 
-    public LocalDate getData() { return data_matricula; }
-    public void setData(LocalDate data_matricula) { this.data_matricula = data_matricula; }
+    public LocalDate getDataMatricula() { return data_matricula; }
+    public void setDataMatricula(LocalDate data_matricula) { this.data_matricula = data_matricula; }
 }

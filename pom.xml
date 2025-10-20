@@ -17,4 +17,5 @@
         <maven.compiler.release>25</maven.compiler.release>
         <exec.mainClass>com.mycompany.sistemamatricula.SistemaMatricula</exec.mainClass>
     </properties>
+    <name>sistemaMatricula Matheus</name>
 </project>

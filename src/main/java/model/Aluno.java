@@ -1,4 +1,4 @@
-package model;
+package main.java.model;
 
 public class Aluno extends BaseEntity {
     private String nome;
@@ -53,4 +53,5 @@ public class Aluno extends BaseEntity {
     public void setTelefone(String telefone) { this.telefone = telefone; }
     
     public int getIdade() {return idade;}
+    public void setIdade(int idade) { this.idade = idade; }
 }

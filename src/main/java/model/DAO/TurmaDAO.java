@@ -2,12 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package model.DAO;
+package main.java.model.DAO;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import model.Conexao;
-import model.Turma;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import main.java.model.Conexao;
+import main.java.model.Curso;
+import main.java.model.Turma;
 
 /**
  *
@@ -66,5 +69,51 @@ public class TurmaDAO implements InterfaceDAO<Turma>{
         } catch (Exception e) {
             System.out.println("Erro ao atualizar o turma: " + e.getMessage());
         }
+    }
+
+    public List<Turma> listar() {
+        List<Turma> turmas = new ArrayList<>();
+        String sql = "SELECT * FROM TURMA";
+        try (Connection conn = Conexao.conectar();
+            Statement st = conn.createStatement();
+            ResultSet rs = st.executeQuery(sql)) {
+            while (rs.next()) {
+                Turma t = new Turma();
+                t.setId(String.valueOf(rs.getInt("ID_TURMA")));
+                t.setAno(rs.getInt("ANO"));
+                t.setSemestre(rs.getInt("SEMESTRE"));
+                
+                Curso c = new Curso();
+                c.setId(String.valueOf(rs.getInt("ID_CURSO")));
+                t.setIdcurso(c);
+                turmas.add(t);
+            }
+        } catch (SQLException e) {
+            System.out.println("Erro ao listar turmas: " + e.getMessage());
+        }
+        return turmas;
+    }
+
+    public Turma buscarPorId(String id) {
+        String sql = "SELECT * FROM TURMA WHERE ID_TURMA=?";
+        try (Connection conn = Conexao.conectar();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, Integer.parseInt(id));
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                Turma t = new Turma();
+                t.setId(id);
+                t.setAno(rs.getInt("ANO"));
+                t.setSemestre(rs.getInt("SEMESTRE"));
+
+                Curso c = new Curso();
+                c.setId(String.valueOf(rs.getInt("ID_CURSO")));
+                t.setIdcurso(c);
+                return t;
+            }
+        } catch (SQLException e) {
+            System.out.println("Erro ao buscar turma: " + e.getMessage());
+        }
+        return null;
     }
 }

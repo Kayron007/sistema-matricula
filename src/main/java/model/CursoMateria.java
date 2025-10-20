@@ -1,4 +1,4 @@
-package model;
+package main.java.model;
 
 public class CursoMateria extends BaseEntity{
     private Curso cursoId; //FK para Curso

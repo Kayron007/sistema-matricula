@@ -1,6 +1,4 @@
-package model;
-
-import java.time.Year;
+package main.java.model;
 
 public class Turma extends BaseEntity {
     private int ano;
