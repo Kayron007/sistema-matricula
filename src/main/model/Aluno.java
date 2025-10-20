@@ -1,6 +1,6 @@
 package main.model;
 
-public class Aluno extends BaseEntity {
+public class Aluno extends Superclasse {
     private String nome;
     private String email;
     private String cpf;

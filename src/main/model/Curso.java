@@ -1,6 +1,6 @@
 package main.model;
 
-public class Curso extends BaseEntity {
+public class Curso extends Superclasse {
     private String nome;
     private int carga_horaria;
 
