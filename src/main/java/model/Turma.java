@@ -1,4 +1,4 @@
-package main.java.model;
+package model;
 
 public class Turma extends BaseEntity {
     private int ano;

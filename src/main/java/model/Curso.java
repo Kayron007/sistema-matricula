@@ -1,4 +1,4 @@
-package main.java.model;
+package model;
 
 public class Curso extends BaseEntity {
     private String nome;

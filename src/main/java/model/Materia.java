@@ -1,4 +1,4 @@
-package main.java.model;
+package model;
 
 public class Materia extends BaseEntity {
     private String nome;

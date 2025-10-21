@@ -2,15 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package main.java.model.DAO;
+package model.DAO;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.model.Materia;
-import main.java.model.Conexao;
-import main.java.model.Curso;
+import model.Materia;
+import model.Conexao;
+import model.Curso;
 /**
  *
  * @author gustavo
@@ -79,10 +79,6 @@ public class MateriaDAO implements InterfaceDAO<Materia>{
                 Materia m = new Materia();
                 m.setId(String.valueOf(rs.getInt("ID_MATERIA")));
                 m.setNome(rs.getString("NOME_MATERIA"));
-
-                Curso c = new Curso();
-                c.setId(String.valueOf(rs.getInt("ID_CURSO")));
-                m.setIdcurso(c);
                 materias.add(m);
             }
 

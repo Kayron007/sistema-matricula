@@ -1,13 +1,13 @@
-package main.java.control;
+package control;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
-import main.java.model.Matricula;
-import main.java.model.Aluno;
-import main.java.model.Turma;
-import main.java.model.DAO.MatriculaDAO;
+import model.Matricula;
+import model.Aluno;
+import model.Turma;
+import model.DAO.MatriculaDAO;
 
 public class MatriculaController {
 
@@ -59,7 +59,7 @@ public class MatriculaController {
 
     public void listar() {
         List<Matricula> lista = dao.listar();
-        System.out.println("=== LISTA DE MATRÍCULAS ===");
+        System.out.println("\n=== MATRÍCULAS ===");
         for (Matricula m : lista) {
             System.out.printf("ID: %s | Aluno: %s | Turma: %s | Status: %s | Data: %s\n",
                     m.getId(),

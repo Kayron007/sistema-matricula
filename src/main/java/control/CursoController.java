@@ -1,9 +1,9 @@
-package main.java.control;
+package control;
 
 import java.util.List;
 import java.util.Scanner;
-import main.java.model.Curso;
-import main.java.model.DAO.CursoDAO;
+import model.Curso;
+import model.DAO.CursoDAO;
 
 public class CursoController {
     private final CursoDAO dao = new CursoDAO();
@@ -42,8 +42,9 @@ public class CursoController {
     public void listarCursos() {
         try {
             List<Curso> list = dao.listar();
+            System.out.println("\n=== CURSOS ===");
             for (Curso c: list) {
-                System.out.printf("%s - %s - %s\n", c.getId(), c.getNome(), c.getCargaHoraria());
+                System.out.printf("%s | %s - %s\n", c.getId(), c.getNome(), c.getCargaHoraria());
             }
         } catch (Exception e) {
             System.out.println("Implemente listar() em CursoDAO.");
@@ -52,6 +53,7 @@ public class CursoController {
 
     public void atualizarCurso(Scanner sc) {
         System.out.print("ID curso: "); String id=sc.nextLine();
+
         Curso c = dao.buscarPorId(id);
         if (c==null) { System.out.println("Curso não encontrado"); return; }
         System.out.print("Nome ["+c.getNome()+"]: "); String s=sc.nextLine(); if(!s.isEmpty()) c.setNome(s);

@@ -1,4 +1,4 @@
-package main.java.model;
+package model;
 
 public abstract class BaseEntity {
     protected String id;

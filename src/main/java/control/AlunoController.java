@@ -1,10 +1,10 @@
-package main.java.control;
+package control;
 
 import java.util.List;
 import java.util.Scanner;
 
-import main.java.model.Aluno;
-import main.java.model.DAO.AlunoDAO;
+import model.Aluno;
+import model.DAO.AlunoDAO;
 
 public class AlunoController{
 
@@ -40,6 +40,7 @@ public class AlunoController{
 
     public void criarAluno(Scanner sc) {
         Aluno a = new Aluno();
+        System.out.print("ID: "); a.setId(sc.nextLine());
         System.out.print("Nome: "); a.setNome(sc.nextLine());
         System.out.print("Email: "); a.setEmail(sc.nextLine());
         System.out.print("CPF: "); a.setCpf(sc.nextLine());
@@ -53,9 +54,9 @@ public class AlunoController{
     public void listarAlunos() {
         try {
             List<Aluno> lista = dao.listar();
-            System.out.println("=== ALUNOS ===");
+            System.out.println("\n=== ALUNOS ===");
             for (Aluno a : lista) {
-                System.out.printf("ID=%s Nome=%s Email=%s\n", a.getId(), a.getNome(), a.getEmail());
+                System.out.printf("ID = %s | Nome = %s - Email = %s\n", a.getId(), a.getNome(), a.getEmail());
             }
         } catch (Exception e) {
             System.out.println("Erro ao listar alunos: " + e.getMessage());

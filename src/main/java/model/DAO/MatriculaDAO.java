@@ -2,16 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package main.java.model.DAO;
+package model.DAO;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.*;
 
-import main.java.model.Aluno;
-import main.java.model.Conexao;
-import main.java.model.Matricula;
-import main.java.model.Turma;
+import model.Aluno;
+import model.Conexao;
+import model.Matricula;
+import model.Turma;
 
 /**
  *

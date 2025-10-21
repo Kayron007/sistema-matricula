@@ -1,10 +1,10 @@
-package main.java.control;
+package control;
 
 import java.util.List;
 import java.util.Scanner;
-import main.java.model.DAO.CursoDAO;
-import main.java.model.Materia;
-import main.java.model.DAO.MateriaDAO;
+import model.DAO.CursoDAO;
+import model.Materia;
+import model.DAO.MateriaDAO;
 
 public class MateriaController {
     private final MateriaDAO dao = new MateriaDAO();
@@ -43,7 +43,8 @@ public class MateriaController {
     public void listar() {
         try {
             List<Materia> l = dao.listar();
-            for (Materia m : l) System.out.printf("%s - %s\n", m.getId(), m.getNome());
+            System.out.println("\n === MATÉRIAS ===");
+            for (Materia m : l) System.out.printf("%s | %s\n", m.getId(), m.getNome());
         } catch (Exception e) {
             System.out.println("Implementar listar() no MateriaDAO.");
         }
@@ -52,7 +53,7 @@ public class MateriaController {
     public void atualizar(Scanner sc) {
         System.out.print("ID matéria: "); String id=sc.nextLine();
         Materia m = dao.buscarPorId(id);
-        if (m==null) { System.out.println("Não encontrada."); return; }
+        if (m==null) { System.out.println("Matéria não encontrada."); return; }
         System.out.print("Nome ["+m.getNome()+"]: "); String s=sc.nextLine(); if(!s.isEmpty()) m.setNome(s);
         dao.atualizar(m);
     }

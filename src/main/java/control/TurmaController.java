@@ -1,10 +1,10 @@
-package main.java.control;
+package control;
 
 import java.util.List;
 import java.util.Scanner;
-import main.java.model.DAO.CursoDAO;
-import main.java.model.Turma;
-import main.java.model.DAO.TurmaDAO;
+import model.DAO.CursoDAO;
+import model.Turma;
+import model.DAO.TurmaDAO;
 
 public class TurmaController {
     private final TurmaDAO dao = new TurmaDAO();
@@ -43,7 +43,8 @@ public class TurmaController {
     public void listar() {
         try {
             List<Turma> l = dao.listar();
-            for (Turma t : l) System.out.printf("%s - %d/%d\n", t.getId(), t.getAno(), t.getSemestre());
+            System.out.println("\n=== TURMAS ===");
+            for (Turma t : l) System.out.printf("%s | %d/%d\n", t.getId(), t.getAno(), t.getSemestre());
         } catch (Exception e) {
             System.out.println("Implemente listar() em TurmaDAO.");
         }

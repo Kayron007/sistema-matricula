@@ -2,11 +2,11 @@ package view;
 
 import java.util.Scanner;
 
-import main.java.control.AlunoController;
-import main.java.control.CursoController;
-import main.java.control.MateriaController;
-import main.java.control.TurmaController;
-import main.java.control.MatriculaController;
+import control.AlunoController;
+import control.CursoController;
+import control.MateriaController;
+import control.TurmaController;
+import control.MatriculaController;
 
 public class Main {
 
