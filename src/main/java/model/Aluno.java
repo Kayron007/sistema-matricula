@@ -6,15 +6,9 @@ public class Aluno extends BaseEntity {
     private String cpf;
     private String endereco;
     private String telefone;
-    private int idade;
 
     //Construtor sem arg
     public Aluno() {}
-    
-    public Aluno(String nome, int idade){
-        this.nome = nome;
-        this.idade = idade;
-    }
 
     //Construtor principal
     public Aluno(String id, String nome, String email, String cpf, String endereco, String telefone) {
@@ -51,7 +45,4 @@ public class Aluno extends BaseEntity {
 
     public String getTelefone() { return telefone; }
     public void setTelefone(String telefone) { this.telefone = telefone; }
-    
-    public int getIdade() {return idade;}
-    public void setIdade(int idade) { this.idade = idade; }
 }
